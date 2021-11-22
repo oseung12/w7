@@ -49,6 +49,12 @@
 
             const target = $(e.target.closest(".node"))
 
+            const children = target.find(".node")
+
+            if(children.length > 0){
+                alert("삭제 불가")
+                return
+            }
 
             target.remove()
         })
